@@ -1,0 +1,74 @@
+
+<script src="/js/cliente/cadastrar.js"></script>
+<div>
+    <h1>Cadastrar Visita</h1>
+</div>
+
+<script>
+  function limitarTamanhoCpf(input) {
+  const maxDigits = parseInt(input.getAttribute('maxlength'));
+  if (input.value.length > maxDigits) {
+    input.value = input.value.slice(0, maxDigits);
+  }
+}
+
+</script>
+
+<!-- this.#clienteId = clienteId;
+this.#clienteCod = clienteCod;
+this.#clienteNome = clienteNome;
+this.#casanome = casanome;
+this.#clienteHora = clienteHora;
+this.#clienteDevolucao = clienteDevolucao;
+this.#cpf = cpf; -->
+
+<div>
+    <form>
+        <div class="form-group">
+            <label for="inputCodigo">Codigo</label>
+            <input type="text" class="form-control" id="inputCodigo">
+          </div>
+        <div class="form-group">
+            <label for="inputNome">Nome</label>
+            <input type="text" class="form-control" id="inputNome">
+          </div>
+          <div class="form-group">
+            <label for="inputData">Data</label>
+            <input type="number" class="form-control" id="inputData">
+        </div>
+        <div class="form-group">
+            <label for="inputHora">Hora</label>
+            <input type="number" class="form-control" id="inputHora">
+        </div>
+        <div class="form-group">
+            <label for="inputDevolucao">Hora da Devolução</label>
+            <input type="number" class="form-control" id="inputDevolucao">
+        </div>
+        <div class="form-group">
+          <label for="inputcpf">CPF</label>
+          <input type="text" class="form-control" id="inputcpf" maxlength="11" pattern="\d{11}" required>
+        </div>
+        <div class="form-group">
+          <label for="inputtel">Telefone</label>
+          <input type="text" class="form-control" id="inputtel" maxlength="11" pattern="\d{11}" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="selCasa">Casa</label>
+          <select class="form-control" id="selCasa">
+            <option value="0">--Selecione</option>
+            <% for(let i = 0; i<listarCasas.length; i++) { %>
+                <option value="<%=listarCasas[i].casaId%>"><%= listarCasas[i].casaNome %></option>
+            <% } %>  
+          </select>
+        </div>
+
+       
+
+        <div>
+
+            <button class="btn btn-primary" type="button" id="btnGravar">Gravar</button>
+            <a href="/admin/produto" class="btn btn-default">Voltar</a>
+        </div>
+      </form>
+</div>

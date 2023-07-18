@@ -1,0 +1,56 @@
+<script src="/js/casa/listar.js"></script>
+
+<div>
+    <h1>Casas cadastradas</h1>
+
+    <a class="btn btn-primary" href="/casas/criar">
+        Criar nova Casa
+    </a>
+
+    <div class="table-responsive" style="margin-top: 15px;">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Casa Valor</th>
+                    <th>Casa Rua</th>
+
+                    <!-- this.#casaId = casaId
+                    this.#casaNome = casaNome
+                    this.#casaValor = casaValor
+                    this.#casaRua = casaRua -->
+
+                </tr>
+            </thead>
+            <tbody>
+                <% lista.map(function(value, index) { %>
+                    <tr>
+                        <td><%= value.casaId %></td>
+                        <td><%= value.casaNome %></td>
+                        <td><%= value.casaValor %></td>
+                        <td><%= value.casaRua %></td>
+                        <td>
+                            <div>
+                                <button data-id="<%= value.casaId %>" title="Excluir" class="btn btn-danger btnExcluir"><i class="fas fa-trash"></i></button>
+                                        <a href="/casas/alterar/<%= value.casaId %>" title="Editar" class="btn btn-primary">
+                                            <i class="fas fa-pen"></i>
+                                </a>
+                            </div>
+                        </td>
+                   
+                    </tr>
+                    
+                <% }) %>
+                
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a style="color: black; text-align: center; font-size: 25px;">!!!!!ANTES DE DELETAR VERIFIQUE SE A CASA ESTÁ COM UMA VISITA EM ABERTA, CASO ESTEJA DELETE A VISITA ANTES!!! SE NÃO O SISTEMA CAI!!!!!!</a>
+    </div>
+</div>

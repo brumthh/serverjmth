@@ -1,0 +1,33 @@
+
+<style>
+    .campoErro {
+        border-color: red;
+    }
+</style>
+
+<script src="/js/cliente/validar.js"></script>
+
+<h1>Alterar usuário</h1>
+
+<div>
+    <div class="alert alert-danger" role="alert" id="erros" style="display:none">
+
+    </div>
+    <div class="alert alert-success" role="alert" id="alertaSucesso" style="display:none;" >
+        
+      </div>
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="hidden" id="inputId" value="<%= alter.clienteId %>">
+          
+            <label for="inputOk">Validar Entrega</label>
+            <input maxlength="2" value="<%= alter.ok %>" type="text" class="form-control" id="inputOk">
+          </div>
+          
+    
+
+        <button type="button" id="btnAlterar" class="btn btn-primary">Gravar</button>
+        <a class="btn btn-secondary" href="/clientes">Voltar</a>
+      </form>
+</div>

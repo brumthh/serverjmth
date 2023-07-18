@@ -1,0 +1,51 @@
+
+<style>
+    .campoErro {
+        border-color: red;
+    }
+</style>
+
+<script src="/js/casa/alterar.js"></script>
+
+<h1>Alterar Casa</h1>
+
+<div>
+    <div class="alert alert-danger" role="alert" id="erros" style="display:none">
+
+    </div>
+    <div class="alert alert-success" role="alert" id="alertaSucesso" style="display:none;" >
+        
+      </div>
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="hidden" id="inputId" value="<%= alter.casaId %>">
+          
+            <label for="inputNome">Nome</label>
+            <input value="<%= alter.casaNome %>" type="text" class="form-control" id="inputNome">
+
+            <label for="inputValor">Casa Valor</label>
+            <input value="<%= alter.casaValor %>" type="text" class="form-control" id="inputValor">
+            
+            <label for="inputRua">Casa Rua</label>
+            <input value="<%= alter.casaRua %>" type="text" class="form-control" id="inputRua">
+
+            <button type="button" id="btnAlterar" class="btn btn-primary">Gravar</button>
+            <a class="btn btn-secondary" href="/clientes">Voltar</a>
+        </div>
+
+
+          
+          <!-- cod: inputCod.value,
+          id: inputId.value,
+          nome: inputNome.value,
+          data: inputData.value,
+          hora: inputEnt.value,
+          devo: inputDev.value,
+          cpf: inputCpf.value,
+          tele: inputTele.value,
+          casa: selCasa.value -->
+
+      
+      </form>
+</div>
